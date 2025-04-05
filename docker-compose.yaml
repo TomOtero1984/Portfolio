@@ -1,0 +1,31 @@
+services:
+  dev-server:
+    build:
+      context: Dockerfiles
+      dockerfile: DevServer
+    volumes:
+      - .:/app
+    ports:
+      - 3000:3000
+      - 80:80
+      - 443:443
+    networks:
+      - portfolio-network
+  vue-server:
+    build:
+      context: Dockerfiles
+      dockerfile: VueServer
+    volumes:
+      - .:/app
+    ports:
+      - 8080:8080
+    networks:
+      - portfolio-network
+
+networks:
+  portfolio-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: "10.0.2.0/24"
+          gateway: "10.0.2.1"
