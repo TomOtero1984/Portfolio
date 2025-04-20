@@ -21,7 +21,10 @@ services:
       - 8080:8080
     networks:
       - portfolio-network
-
+  openvpn-server:
+    build:
+      context: Dockerfiles
+      dockerfile: OpenVPNServer.dockerfile
 networks:
   portfolio-network:
     driver: bridge
