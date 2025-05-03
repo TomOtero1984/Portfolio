@@ -1,3 +1,7 @@
 .build
 .env
 lib
+.idea
+.fleet
+/ssh/authorized_keys
+/ssh/id_ed25519
