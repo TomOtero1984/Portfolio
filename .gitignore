@@ -5,3 +5,6 @@ lib
 .fleet
 /ssh/authorized_keys
 /ssh/id_ed25519
+node_modules
+.DS_Store
+.private
