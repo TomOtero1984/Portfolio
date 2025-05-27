@@ -1,5 +1,0 @@
-docker run --name teamcity-server-instance  \
-    -v /.nofollow/Users/TeamCity/data:/data/teamcity_server/datadir \
-    -v /.nofollow/Users/TeamCity/logs:/opt/teamcity/logs  \
-    -p 8181:8111 \
-    jetbrains/teamcity-server
