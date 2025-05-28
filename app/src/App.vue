@@ -8,6 +8,7 @@ import Footer from '@/components/Footer.vue'
     <router-view/>
     <Footer/>
   </div>
+  </div>
 </template>
 <style scoped>
 /* Optional styles */
