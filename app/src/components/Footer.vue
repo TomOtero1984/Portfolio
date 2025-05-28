@@ -19,14 +19,6 @@
           <span class="footer-icon">📱</span>
         </a>
       </div>
-<template>
-  <footer class="main-footer">
-    <div class="footer-content">
-      <p>&copy; 2025 Tom Otero's Portfolio. All rights reserved.</p>
-      <ul class="footer-links">
-        <li><a href="#privacy">Privacy Policy</a></li>
-        <li><a href="#terms">Terms of Service</a></li>
-      </ul>
     </div>
   </footer>
 </template>
