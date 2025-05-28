@@ -87,9 +87,11 @@
   .nav { gap: 0.9em; }
   .logo { font-size: 1.4em; }
 }
+
 .logo-img {
   max-width: 42px;  /* or whatever size you want */
   height: auto;
   display: block;
 }
+
 </style>
