@@ -10,3 +10,4 @@ node_modules
 .private
 .backups
 .generated
+Resume/private/
