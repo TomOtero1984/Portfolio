@@ -7,7 +7,7 @@
     <div class="header-content">
       <router-link to="/" class="brand">
         <!-- You can replace this emoji or use a local SVG/photo/logo if you prefer -->
-        <span class="logo" aria-label="Tom Otero">🚀</span>
+        <img class="logo-img" src="@/assets/robot_cat_engineer_true_silhouette_white.png" alt="logo"/>
         <span class="brand-name">Tom Otero</span>
         <span class="brand-role">Build & Release Engineer</span>
       </router-link>
@@ -86,5 +86,10 @@
   .brand-role { display: none; }
   .nav { gap: 0.9em; }
   .logo { font-size: 1.4em; }
+}
+.logo-img {
+  max-width: 42px;  /* or whatever size you want */
+  height: auto;
+  display: block;
 }
 </style>

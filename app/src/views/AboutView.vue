@@ -10,7 +10,7 @@
       <!-- Replace with local profile photo if you like -->
       <img
         class="about-photo"
-        src="https://avatars.githubusercontent.com/u/your-github-id"
+        src="../assets/headshot.png"
         alt="Tom Otero headshot"
       />
       <section class="about-intro">
