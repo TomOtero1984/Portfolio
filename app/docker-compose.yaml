@@ -32,13 +32,6 @@ services:
     networks:
       - portfolio-network
 
-  openvpn-server:
-    profiles:
-      - openvpn
-    build:
-      context: openvpn-server
-
-
 networks:
   portfolio-network:
     driver: bridge

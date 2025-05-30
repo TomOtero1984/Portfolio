@@ -1,10 +1,10 @@
 FROM debian:latest
 
 RUN apt-get update && \
-    apt install -y nodejs npm openssh-server vim sudo
+    apt install -y nodejs npm openssh-server vim sudo git
 
 # Copying host files
-COPY .. /app
+# COPY .. /app
 COPY ../vue-server/entrypoint.sh /entrypoint.sh
 
 # Setting up SSH
@@ -25,6 +25,9 @@ COPY ../ssh /home/docker/.ssh
 
 # Setting up web app
 WORKDIR /app
+
+RUN git clone https://github.com/TomOtero1984/Portfolio.git .
+
 RUN npm config set -g yes true && \
     npm config set -g fund false && \
     npm config set -g audit false && \
