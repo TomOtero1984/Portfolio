@@ -22,10 +22,12 @@ services:
       dockerfile: ./vue-server/Dockerfile
     volumes:
       - type: bind
-        source: ssh/
+        source: ./ssh
         target: /ssh
         read_only: true
     ports:
+      - 443:443
+      - 80:80
       - 8080:8080
       - 2222:22
       - 3333:3000

@@ -5,7 +5,7 @@ RUN apt-get update && \
 
 # Copying host files
 # COPY .. /app
-COPY ../vue-server/entrypoint.sh /entrypoint.sh
+COPY ./vue-server/entrypoint.sh /entrypoint.sh
 
 # Setting up SSH
 RUN sed -i \
@@ -18,13 +18,13 @@ RUN sed -i \
 RUN useradd -m -d /home/docker -s /bin/bash docker && \
     usermod -aG sudo docker && \
     echo "docker:docker" | chpasswd
-COPY ../ssh /home/docker/.ssh
+COPY ./ssh /home/docker/.ssh
 #RUN chmod 700 /home/docker/.ssh && \
 #    chown -R docker:docker /home/docker/.ssh && \
 #    chmod 600 /home/docker/.ssh/*
 
 # Setting up web app
-WORKDIR /app
+WORKDIR /app/app
 
 RUN git clone https://github.com/TomOtero1984/Portfolio.git .
 
