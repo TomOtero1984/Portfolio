@@ -33,7 +33,6 @@
         <p>
           I’m currently open to new roles in build systems, infrastructure engineering, or embedded toolchains—especially in industries where reliability and iteration speed both matter. If you're solving interesting problems at scale and need someone to help your developers move faster without breaking things, I’d love to talk.
         </p>
-        </p>
         <ul class="about-links">
           <li>
             <a href="mailto:tomotero1984@gmail.com" target="_blank" rel="noopener">
