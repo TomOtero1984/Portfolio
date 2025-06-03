@@ -15,16 +15,24 @@
       />
       <section class="about-intro">
         <p>
-          Hi! I'm <strong>Tom Otero</strong>, a Build & Release Engineer based in Brooklyn, NY. I’m passionate about automating developer workflows, scaling CI/CD infrastructure, and improving engineering productivity across diverse teams and industries.
+          Hi! I'm <strong>Tom Otero</strong>, a Build & Release Engineer with a background in embedded systems and mechanical engineering. I specialize in automating developer workflows, scaling CI/CD infrastructure, and supporting teams across gaming, embedded hardware, and Linux-based systems. Based in Brooklyn, NY, I’ve worked in both high-velocity environments and deeply technical domains, always focused on making builds reproducible, deployments reliable, and engineering smoother for everyone involved.
         </p>
+
         <p>
-          My experience spans fintech, gaming, and open source. At Rockstar Games, I manage asset-driven CI/CD pipelines for both Windows and Linux, lead infrastructure upgrades, transform legacy processes into reusable automation, and champion containerization with Docker for reliable deployments. I collaborate closely with QA, developers, and release managers to deliver stable builds quickly and efficiently.
+          At <strong>Rockstar Games</strong>, I maintain and extend TeamCity-driven CI/CD pipelines supporting a broad set of internal tools and developer workflows. My work includes deploying assets across isolated networks via SSH and rsync, managing Perforce/Git integrations, and supporting Windows and Linux infrastructure. I’ve replaced legacy servers, migrated systems to WSL2-backed environments, and documented build and release processes to make onboarding and incident resolution easier for the whole team. When things go sideways, I coordinate with developers, QA, project leads, and NOC to keep builds moving and unblock teams during high-stakes releases.
         </p>
+
         <p>
-          Previously, I worked at Novus Labs (contracted to Cruise), where I built automated pipelines in Jenkins and Buildkite, developed Python test automation for embedded Linux systems, and maintained artifact management using JFrog Artifactory. Across every environment, I focus on reproducibility, testability, and enabling teams to ship with confidence.
+          Before that, I worked at <strong>Novus Labs</strong>, first as a mechanical engineer, then as an embedded systems test engineer on the Cruise GM contract. My mechanical work included designing RF testbeds for Alexa Bluetooth Mesh certification and building firmware-synchronized microcontroller systems using ATmega328P. I wrote automation scripts in Python and Bash to control USB-over-SSH devices, Telnet power switches, and voice-triggered test scenarios using sox and Google TTS. Later, I transitioned to embedded Linux validation—developing Pytest frameworks for low-level drivers, building latency-sensitive test harnesses with Raspberry Pi and Arduino, and managing nightly CI pipelines using Jenkins and Buildkite. I delivered reproducible test logs, regression data, and system-level benchmarks that helped firmware teams move faster and break less.
         </p>
+
         <p>
-          I’m passionate about developer experience, CI/CD best practices, and helping teams modernize their workflows—whether for games, cloud-native services, or enterprise apps.
+          Across every role, my focus is on improving reliability, maintainability, and team productivity—whether that means refactoring flaky pipelines, automating a testbed, or helping devs understand their build failures. I work best when I can be hands-on with both the system and the people using it, bridging gaps between engineering layers to keep teams moving.
+        </p>
+
+        <p>
+          I’m currently open to new roles in build systems, infrastructure engineering, or embedded toolchains—especially in industries where reliability and iteration speed both matter. If you're solving interesting problems at scale and need someone to help your developers move faster without breaking things, I’d love to talk.
+        </p>
         </p>
         <ul class="about-links">
           <li>
