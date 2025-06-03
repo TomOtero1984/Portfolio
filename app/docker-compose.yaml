@@ -8,9 +8,9 @@ services:
     volumes:
       - ./dev-server:/app
     ports:
-      - 3000:3000
-      - 80:80
-      - 443:443
+      - "3000:3000"
+      - "80:80"
+      - "443:443"
     networks:
       - portfolio-network
 
@@ -22,15 +22,22 @@ services:
       dockerfile: ./vue-server/Dockerfile
     volumes:
       - type: bind
-        source: ssh/
+        source: ./ssh
         target: /ssh
         read_only: true
     ports:
-      - 8080:8080
-      - 2222:22
-      - 3333:3000
+      - "8080:8080"
+      - "2222:22"
+      - "3333:3000"
     networks:
       - portfolio-network
+
+  openvpn-server:
+    profiles:
+      - openvpn
+    build:
+      context: openvpn-server
+
 
 networks:
   portfolio-network:

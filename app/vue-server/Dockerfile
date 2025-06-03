@@ -1,11 +1,28 @@
-FROM debian:latest
+FROM debian:latest AS server-base
 
-RUN apt-get update && \
-    apt install -y nodejs npm openssh-server vim sudo git
+RUN apt-get update && apt install -y \
+    nodejs npm git \
+    curl openssh-server vim unzip
+RUN npm install -g serve
 
-# Copying host files
-# COPY .. /app
-COPY ../vue-server/entrypoint.sh /entrypoint.sh
+FROM server-base AS app-builder
+
+RUN curl -L -o portfolio.tar.gz \
+    https://github.com/TomOtero1984/Portfolio/archive/refs/heads/main.tar.gz && \
+    mkdir src && \
+    tar -xzf portfolio.tar.gz -C src --strip-components=1
+
+WORKDIR /src/app
+
+RUN npm config set -g yes true && \
+    npm config set -g fund false && \
+    npm config set -g audit false && \
+    npm config set -g registry https://registry.npmjs.org/ && \
+    npm config set -g save-exact true
+
+RUN rm -rf package-lock.json node_modules dist
+
+RUN npm install && npm run build
 
 # Setting up SSH
 RUN sed -i \
@@ -18,26 +35,12 @@ RUN sed -i \
 RUN useradd -m -d /home/docker -s /bin/bash docker && \
     usermod -aG sudo docker && \
     echo "docker:docker" | chpasswd
-COPY ../ssh /home/docker/.ssh
-#RUN chmod 700 /home/docker/.ssh && \
-#    chown -R docker:docker /home/docker/.ssh && \
-#    chmod 600 /home/docker/.ssh/*
+COPY ./ssh /home/docker/.ssh
+
+FROM server-base AS app
 
 # Setting up web app
-WORKDIR /app
-
-RUN git clone https://github.com/TomOtero1984/Portfolio.git .
-
-RUN npm config set -g yes true && \
-    npm config set -g fund false && \
-    npm config set -g audit false && \
-    npm config set -g registry https://registry.npmjs.org/ && \
-    npm config set -g save-exact true
-
-RUN rm -rf package-lock.json node_modules dist
-
-RUN npm install -g serve
-RUN npm install
-RUN npm run build
+COPY --from=app-builder /src/app/dist /app/dist
+COPY ./vue-server/entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT [ "/bin/bash", "/entrypoint.sh" ]
