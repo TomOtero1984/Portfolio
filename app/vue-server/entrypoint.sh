@@ -4,6 +4,6 @@
 service ssh start
 
 # Website
-serve /app/dist
+serve -l 3333 /app/dist
 
 # tail -f /dev/null
