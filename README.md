@@ -4,6 +4,10 @@
 
 Tom Otero's resume storage and portfolio website source code.
 
+- Portfolio: <a href="tom-otero.fyi">tom-otero.fyi</a>
+- Resume: <a href="./Resume/Tom Otero - Resume.pdf">Tom Otero - Resume.pdf</a>
+- Linkedin: <a href="www.linkedin.com/in/tomotero1984">www.linkedin.com/in/tomotero1984</a>
+
 ---
 
 ### 🗺️ Overview
