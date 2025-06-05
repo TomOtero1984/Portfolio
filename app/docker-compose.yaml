@@ -26,12 +26,11 @@ services:
         target: /ssh
         read_only: true
     ports:
-
-      - 443:443
-      - 80:80
-      - 8080:8080
-      - 2222:22
-      - 3333:3000
+      - "443:443"
+      - "80:80"
+      - "8080:8080"
+      - "2222:22"
+      - "3333:3000"
     networks:
       - portfolio-network
   openvpn-server:
