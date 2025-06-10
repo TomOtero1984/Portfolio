@@ -1,9 +1,9 @@
 <script setup lang="ts">
-// Feel free to import any assets, images, or icons you want to include here!
+// Nothing to import here for now!
 </script>
 
 <template>
-  <section class="home">
+  <section class="home-wrapper">
     <div class="home-content">
       <h1>Hi, I’m Tom Otero</h1>
       <h2>Build & Release / Software Engineer</h2>
@@ -33,22 +33,30 @@
 </template>
 
 <style scoped>
-.home {
-  min-height: 85vh;
+/* NEW: Full height wrapper with padding and layout behavior */
+.home-wrapper {
+  flex: 1;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  padding: 3rem 1rem 4rem;
   background: linear-gradient(100deg, #e3edf7 0%, #f6f8fa 80%);
+  width: 100%;
+  box-sizing: border-box;
 }
+
 .home-content {
   max-width: 700px;
-  margin: 3rem auto;
-  padding: 2.6rem 2rem;
+  margin: 0 auto;
+  padding: 2rem;
   border-radius: 16px;
   background: #fffefd;
-  box-shadow: 0 3px 16px rgba(20,40,80,0.11);
+  box-shadow: 0 3px 16px rgba(20, 40, 80, 0.11);
   text-align: center;
 }
+
+/* Typography */
 h1 {
   font-size: 2.4rem;
   color: #1976d2;
@@ -66,6 +74,8 @@ h2 {
   color: #182430;
   margin-bottom: 2.4em;
 }
+
+/* Highlights box */
 .quick-highlights {
   text-align: left;
   margin: 0 auto 1.8em auto;
@@ -87,6 +97,8 @@ h2 {
   font-size: 1rem;
   line-height: 1.7;
 }
+
+/* Call to Action */
 .home-actions {
   margin-top: 2.5em;
   font-size: 1.1rem;
@@ -112,9 +124,11 @@ h2 {
   background: #1976d2;
   color: #fff;
 }
+
+/* Responsive tweaks */
 @media (max-width: 650px) {
   .home-content {
-    padding: 1.2rem .7rem;
+    padding: 1.2rem 0.7rem;
   }
   .quick-highlights {
     font-size: 0.98rem;

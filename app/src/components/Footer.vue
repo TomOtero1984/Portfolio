@@ -10,13 +10,13 @@
       </div>
       <div class="footer-links">
         <a href="mailto:tomotero1984@gmail.com" title="Email" aria-label="Email">
-          <span class="footer-icon">📧</span>
+          <span class="footer-icon">📧tomotero1984@gmail.com</span>
         </a>
         <a href="https://linkedin.com/in/tomotero1984" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
-          <span class="footer-icon">💼</span>
+          <span class="footer-icon">💼 linkedin.com/in/tomotero1984</span>
         </a>
         <a href="tel:+15039270633" title="Phone" aria-label="Phone">
-          <span class="footer-icon">📱</span>
+          <span class="footer-icon">📱+1(503)927-0633</span>
         </a>
       </div>
     </div>
