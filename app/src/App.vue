@@ -5,10 +5,29 @@ import Footer from '@/components/Footer.vue'
 <template>
   <div id="app">
     <Header/>
-    <router-view/>
+    <main class="main-content">
+      <router-view/>
+    </main>
     <Footer/>
   </div>
 </template>
 <style scoped>
-/* Optional styles */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
 </style>
