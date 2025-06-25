@@ -1,47 +1,13 @@
-<style>
-  .title {
-    font-family: "Hack Nerd Font", serif;
-  }
-  .section {
-    text-align: center;
-    font-family: "Hack Nerd Font", serif;
-    font-size: 21px;
-    font-weight: lighter;
-  }
-  .instruct {
-    font-family: "Hack Nerd Font", serif;
-    font-size: 18px;
-    font-weight: lighter
-  }
-  h3 {
-    font-family: "Hack Nerd Font", serif;
-    font-size: 14px;
-    font-weight: normal;
-    font-style: italic;
-    padding-bottom: 0;
-  }
-  code {
-    color: lightgreen;
-    font-family: "Hack Nerd Font", serif;
-    font-weight: lighter;
-  }
-  p {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
+# Portfolio App
+---
 
-</style>
-<h1 class="title" style="text-align: center;"> Portfolio App </h1>
-<hr>
+## Setup
+The Portfolio app was created with the intention to be containerized, but Docker is not required.
 
-<h2 class="section" id="docker-setup"> Docker Setup </h2>
-<p>
-The Portfolio app was created with the intention to be containerized. As such, this is the preferred setup method
-</p>
+### Install Docker Engine
 
-<h2 class="instruct" id="docker-engine"> Install Docker Engine</h2>
+#### Windows
 
-<h3> Windows </h3>
 <p>
 Use the following link to find instructions on installing Docker Desktop on Windows, or run the following command.
 <a href="https://docs.docker.com/desktop/setup/install/windows-install">https://docs.docker.com/desktop/setup/install/windows-install</a>
@@ -52,7 +18,8 @@ Alternatively, use winget to install Docker from your terminal.
 <blockquote>
 <code>winget install -e --id Docker.DockerDesktop</code>
 </blockquote>
-<h3> Linux </h3>
+
+#### Linux
 
 Follow the installation instruction for your distro
 https://docs.docker.com/engine/install/
@@ -63,11 +30,11 @@ Linux users can choose between installing just the docker engine or installing D
 
 Docker Desktop contains all of the necessary tools to proceed. If you install only docker.io, you will need to also install docker-compose.
 
-<h3> MacOS </h3>
+#### MacOS
 
 Use the following link for instruction on install Docker Desktop. https://docs.docker.com/desktop/setup/install/mac-install/
 
-<h2 class="instruct"> Docker-Compose </h2>
+### Docker-Compose
 <p>Install docker-compose using the method that applies to you operating system</p>
 
 *Local setup*
