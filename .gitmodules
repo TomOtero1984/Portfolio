@@ -1,0 +1,3 @@
+[submodule "tools/DockerPreprocessor"]
+	path = tools/DockerPreprocessor
+	url = git@github.com:TomOtero1984/DockerPreprocessor.git

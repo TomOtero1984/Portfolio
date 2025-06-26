@@ -1,0 +1,12 @@
+# This file must be processed on using the DockerPreprocessor
+# https://github.com/TomOtero1984/DockerPreprocessor
+
+
+FROM debian:latest
+
+RUN ./get_env
+
+RUN apt-get update && apt install -y \
+    openvpn openssh-server vim
+
+COPY ${SERVER_CONF} /etc/openvpn/server.conf
