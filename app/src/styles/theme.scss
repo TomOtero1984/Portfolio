@@ -1,0 +1,32 @@
+:root {
+  --bg: #2e2e2e;
+  --text: #d6d6d6;
+  --accent: #6c99bb;
+  --monokai-bg:    #2e2e2e;
+  --monokai-text:  #d6d6d6;
+  --monokai-comment: #797979;
+  --monokai-yellow: #e5b567;
+  --monokai-green:  #b4d273;
+  --monokai-orange: #e87d3e;
+  --monokai-purple: #9e86c8;
+  --monokai-pink:   #b05279;
+  --monokai-blue:   #6c99bb;
+  --gruvbox-bg:     #32302f;
+  --gruvbox-bg-light: #4b4441;
+  --gruvbox-green:  #b8bb26;
+  --gruvbox-orange: #d8a65c;
+  --gruvbox-beige:  #d4be9a;
+
+  --box-shadow: 0 2px 16px var(--monokai-pink);
+}
+
+.link {
+  color: var(--monokai-blue);
+  text-decoration: none;
+  transition: color 0.22s;
+}
+
+.link:hover {
+  color: var(--monokai-pink);
+  text-decoration: underline;
+}
