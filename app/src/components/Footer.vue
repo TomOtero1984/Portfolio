@@ -1,5 +1,4 @@
 <script setup lang="ts">
-// No extra logic required, but you can import assets if you wish
 </script>
 
 <template>

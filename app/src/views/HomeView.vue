@@ -1,5 +1,4 @@
 <script setup lang="ts">
-// Feel free to import any assets, images, or icons you want to include here!
 </script>
 
 <template>

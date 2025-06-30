@@ -1,4 +1,5 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+</script>
 
 <template>
   <header class="site-header">
@@ -18,6 +19,7 @@
         <router-link to="/about" exact-active-class="active">About</router-link>
         <router-link to="/projects" exact-active-class="active">Projects</router-link>
         <router-link to="/contact" exact-active-class="active">Contact</router-link>
+        <router-link to="/terminal" exact-active-class="active">Terminal</router-link>
       </nav>
     </div>
   </header>
