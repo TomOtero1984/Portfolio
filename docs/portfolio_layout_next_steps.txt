@@ -1,0 +1,21 @@
+Portfolio Layout Fixes – Next Steps (Mobile-Focused)
+
+1. Footer – Mobile Layout Adjustment
+   - Issue: Footer breaks or appears misaligned on small viewports.
+   - Fix: Switch to vertical column layout below mobile breakpoint.
+     Use flex-col or grid structure for better flow on narrow screens.
+
+2. Navbar – Responsive Compression
+   - Issue: Name/title area gets squished on mobile.
+   - Fix: Add hamburger menu or dropdown nav for mobile view.
+     Consider shortening the header title or using initials.
+
+3. GitHub Link – Footer Enhancement (Low Priority)
+   - Note: Already listed on resume; not urgent.
+   - Suggestion: Add GitHub icon/link to the footer during next revision.
+
+Suggested Immediate Actions:
+- Add mobile breakpoint styles (e.g., @media (max-width: 768px))
+- Update footer layout to use stacked elements in mobile view
+- Add menu toggle logic for responsive navbar
+- Optionally, add GitHub icon using a modern icon library (Heroicons, Font Awesome, etc.)
