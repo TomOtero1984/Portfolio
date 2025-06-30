@@ -19,10 +19,12 @@ window.onload = function () {
 };
 </script>
 <template>
+  <section class="terminal">
     <div id="screen_container">
       <div style="white-space: pre; font: 14px monospace; line-height: 14px">If you see this, try refreshing...</div>
       <canvas style="display: none">If you see this, try refreshing...</canvas>
     </div>
+  </section>
 </template>
 
 <style scoped>

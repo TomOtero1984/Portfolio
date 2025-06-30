@@ -5,7 +5,6 @@
   <header class="site-header">
     <div class="header-content">
       <router-link to="/" class="brand">
-        <!-- You can replace this emoji or use a local SVG/photo/logo if you prefer -->
         <img
           class="logo-img"
           src="@/assets/robot_cat_engineer_true_silhouette_white.png"
