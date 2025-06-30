@@ -1,3 +1,6 @@
 [submodule "tools/DockerPreprocessor"]
 	path = tools/DockerPreprocessor
 	url = git@github.com:TomOtero1984/DockerPreprocessor.git
+[submodule "app/external/v86"]
+	path = app/external/v86
+	url = https://github.com/copy/v86
