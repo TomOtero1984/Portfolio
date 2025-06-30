@@ -9,11 +9,12 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "docker-clean": "docker container prune -f && docker image prune -f && docker network prune -f",
     "docker-up-recreate": "docker-compose --file ~/web/apps/dev/Portfolio/app/docker-compose.yaml up --build --detach --force-recreate vue-server",
-    "docker-up-fresh": "npm run docker-clean && npm run docker-up-recreate", 
+    "docker-up-fresh": "npm run docker-clean && npm run docker-up-recreate",
     "docker-up": "docker-compose --file ~/web/apps/dev/Portfolio/app/docker-compose.yaml up --detach"
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "marked": "^15.0.12",
     "vue": "^3.2.13",
     "vue-router": "^4.5.1"
   },

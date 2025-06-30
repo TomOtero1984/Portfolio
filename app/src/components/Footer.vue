@@ -25,25 +25,25 @@
 
 <style scoped>
 .site-footer {
-  background: #1976d2;
-  color: #e3edf7;
+  background: var(--accent);
+  color: var(--bg);
   padding: 1.2em 0 1em 0;
   font-size: 1rem;
-  box-shadow: 0 -2px 15px #11234418;
+  box-shadow: 0 -2px 15px black;
   margin-top: 4em;
 }
 .footer-content {
-  max-width: 1080px;
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 1080px;
+  margin: 0 auto;
   padding: 0 2rem;
 }
 .footer-left {
   font-size: 1.02em;
   letter-spacing: 0.01em;
-  color: #e3edf7;
+  color: var(--bg);
 }
 .footer-links {
   display: flex;
@@ -61,7 +61,7 @@
   align-items: center;
 }
 .footer-links a:hover {
-  background: #1976d2;
+  background: var(--text);
   color: #fff;
   box-shadow: 0 2px 8px #1a509025;
 }

@@ -1,13 +1,15 @@
-<script setup lang="ts">
-// No special logic unless you want to pass in props
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <header class="site-header">
     <div class="header-content">
       <router-link to="/" class="brand">
         <!-- You can replace this emoji or use a local SVG/photo/logo if you prefer -->
-        <img class="logo-img" src="@/assets/robot_cat_engineer_true_silhouette_white.png" alt="logo"/>
+        <img
+          class="logo-img"
+          src="@/assets/robot_cat_engineer_true_silhouette_white.png"
+          alt="logo"
+        />
         <span class="brand-name">Tom Otero</span>
         <span class="brand-role">Build & Release Engineer</span>
       </router-link>
@@ -23,10 +25,10 @@
 
 <style scoped>
 .site-header {
-  background: #1976d2;
-  color: #fff;
-  box-shadow: 0 2px 12px #11234410;
-  position: sticky; /* stays at top */
+  background: var(--accent);
+  color: var(--gruvbox-bg-light);
+  box-shadow: 0 2px 10px black;
+  position: sticky;
   top: 0;
   z-index: 50;
   padding: 0.5rem 0;
@@ -58,16 +60,16 @@
 .brand-role {
   font-size: 0.98rem;
   margin-left: 0.8em;
-  color: #e3edf7;
+  color: var(--bg);
   font-weight: 400;
-  letter-spacing: 0.00em;
+  letter-spacing: 0em;
 }
 .nav {
   display: flex;
   gap: 1.4em;
 }
 .nav a {
-  color: #e3edf7;
+  color: var(--text);
   font-weight: 500;
   text-decoration: none;
   font-size: 1.07rem;
@@ -77,18 +79,28 @@
 }
 .nav a:hover,
 .nav a.active {
-  color: #fff;
-  border-bottom: 2px solid #fff;
+  color: var(--monokai-pink);
+  border-bottom: 2px solid var(--monokai-pink);
 }
 @media (max-width: 700px) {
-  .header-content { padding: 0 0.5rem; }
-  .brand-name { font-size: 1.1rem; }
-  .brand-role { display: none; }
-  .nav { gap: 0.9em; }
-  .logo { font-size: 1.4em; }
+  .header-content {
+    padding: 0 0.5rem;
+  }
+  .brand-name {
+    font-size: 1.1rem;
+  }
+  .brand-role {
+    display: none;
+  }
+  .nav {
+    gap: 0.9em;
+  }
+  .logo {
+    font-size: 1.4em;
+  }
 }
 .logo-img {
-  max-width: 42px;  /* or whatever size you want */
+  max-width: 42px; /* or whatever size you want */
   height: auto;
   display: block;
 }
