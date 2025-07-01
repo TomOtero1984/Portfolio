@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { ref, onMounted } from 'vue'
+
 import V86 from "@/assets/v86/build/libv86.mjs";
+
 
 // These resolve to strings like `/assets/v86/build/v86-abc123.wasm`
 import wasmURL from "@/assets/v86/build/v86.wasm?url";
@@ -8,7 +11,8 @@ import vgaBiosURL from "@/assets/v86/bios/vgabios.bin?url";
 import cdromURL from "@/assets/v86/image/linux4/linux4.iso?url";
 import basefsURL from "@/assets/v86/image/linux4/fs.json?url";
 
-window.onload = function () {
+onMounted(() => function () {
+  console.log("mounted");
   var emulator = new V86({
     wasm_path: wasmURL,
     memory_size: 512 * 1024 * 1024,
@@ -24,7 +28,8 @@ window.onload = function () {
     autostart: true,
     cmdline: "rw root=host9p rootfstype=9p rootflags=trans=virtio,cache=loose modules=virtio_pci tsc=reliable",
   });
-};
+});
+
 </script>
 <template>
   <section class="terminal">
