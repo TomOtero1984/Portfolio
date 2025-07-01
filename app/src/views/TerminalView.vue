@@ -1,17 +1,25 @@
 <script setup lang="ts">
-import V86 from "../v86/build/libv86.mjs";
+import V86 from "@/assets/v86/build/libv86.mjs";
+
+// These resolve to strings like `/assets/v86/build/v86-abc123.wasm`
+import wasmURL from "@/assets/v86/build/v86.wasm?url";
+import biosURL from "@/assets/v86/bios/seabios.bin?url";
+import vgaBiosURL from "@/assets/v86/bios/vgabios.bin?url";
+import cdromURL from "@/assets/v86/image/linux4/linux4.iso?url";
+import basefsURL from "@/assets/v86/image/linux4/fs.json?url";
+
 window.onload = function () {
   var emulator = new V86({
-    wasm_path: "../v86/build/v86.wasm",
+    wasm_path: wasmURL,
     memory_size: 512 * 1024 * 1024,
     vga_memory_size: 8 * 1024 * 1024,
     screen_container: document.getElementById("screen_container"),
-    bios: {url: "../v86/bios/seabios.bin"},
-    vga_bios: {url: "../v86/bios/vgabios.bin"},
-    cdrom: {url: "../../images/linux4/linux4.iso"},
+    bios: { url: biosURL },
+    vga_bios: { url: vgaBiosURL },
+    cdrom: { url: cdromURL },
     filesystem: {
-      baseurl: "../../images/linux4",
-      basefs: "../../images/linux4/fs.json",
+      baseurl: basefsURL.replace(/fs\.json$/, ""), // removes fs.json if needed
+      basefs: basefsURL,
     },
     autostart: true,
     cmdline: "rw root=host9p rootfstype=9p rootflags=trans=virtio,cache=loose modules=virtio_pci tsc=reliable",

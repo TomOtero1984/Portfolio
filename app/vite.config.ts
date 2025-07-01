@@ -1,10 +1,10 @@
-import {defineConfig} from 'vite'
+import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
 
 export default defineConfig({
   root: process.cwd(),
-  plugins: [vue()],
+  plugins: [ vue() ],
   base: '/',
   resolve: {
     alias: {
@@ -21,5 +21,16 @@ export default defineConfig({
         additionalData: `@use "@/styles/theme.scss" as theme;` // optional global import
       }
     }
-  }
+  },
+  assetsInclude: [ '**/*.wasm' ],
+  build: {
+    rollupOptions: {
+      output: {
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name?.endsWith('.wasm')) return 'assets/[name]-[hash][extname]';
+          return 'assets/[name]-[hash][extname]';
+        },
+      },
+    },
+  },
 })
