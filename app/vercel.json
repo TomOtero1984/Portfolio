@@ -1,17 +1,35 @@
 {
   "rewrites": [
     {
-      "source": "/(.*)\\.(wasm|bin|iso|json)",
-      "destination": "/$1.$2"
+      "source": "/assets/(.*)",
+      "destination": "/assets/$1"
     }
   ],
   "headers": [
     {
-      "source": "/(.*)\\.wasm",
+      "source": "/assets/(.*)\\.wasm",
       "headers": [
         {
           "key": "Content-Type",
           "value": "application/wasm"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)\\.bin",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/octet-stream"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)\\.iso",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/octet-stream"
         }
       ]
     }

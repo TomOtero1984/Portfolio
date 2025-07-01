@@ -8,12 +8,6 @@ import vgaBiosURL from "@/assets/v86/bios/vgabios.bin?url";
 import cdromURL from "@/assets/v86/image/linux4/linux4.iso?url";
 import basefsURL from "@/assets/v86/image/linux4/fs.json?url";
 
-
-console.log("wasmURL:", wasmURL);
-console.log("biosURL:", biosURL);
-console.log("cdromURL:", cdromURL);
-console.log("basefsURL:", basefsURL);
-
 window.onload = function () {
   var emulator = new V86({
     wasm_path: wasmURL,
