@@ -11,7 +11,7 @@ import vgaBiosURL from "@/assets/v86/bios/vgabios.bin?url";
 import cdromURL from "@/assets/v86/image/linux4/linux4.iso?url";
 import basefsURL from "@/assets/v86/image/linux4/fs.json?url";
 
-onMounted(() => function () {
+onMounted(() => {
   console.log("mounted");
   var emulator = new V86({
     wasm_path: wasmURL,
