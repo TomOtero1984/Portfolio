@@ -22,7 +22,7 @@ export default defineConfig({
       }
     }
   },
-  assetsInclude: [ '**/*.wasm' ],
+  assetsInclude: ['**/*.wasm', '**/*.iso', '**/*.bin', '**/*.json'],
   build: {
     rollupOptions: {
       output: {

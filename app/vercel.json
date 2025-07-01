@@ -1,7 +1,13 @@
 {
+  "rewrites": [
+    {
+      "source": "/(.*)\\.(wasm|bin|iso|json)",
+      "destination": "/$1.$2"
+    }
+  ],
   "headers": [
     {
-      "source": "/(.*).wasm",
+      "source": "/(.*)\\.wasm",
       "headers": [
         {
           "key": "Content-Type",
