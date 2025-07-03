@@ -1,3 +1,5 @@
 dist
 package-lock.json
 *.bak
+images/FiwixOS
+images/Windows98

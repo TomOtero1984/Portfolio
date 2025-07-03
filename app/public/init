@@ -1,0 +1,4 @@
+#!/bin/sh
+/bin/mount -t devtmpfs devtmpfs /dev
+echo "Hello from init!"
+exec /bin/sh

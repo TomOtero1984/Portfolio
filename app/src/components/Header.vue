@@ -1,10 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+</script>
 
 <template>
   <header class="site-header">
     <div class="header-content">
       <router-link to="/" class="brand">
-        <!-- You can replace this emoji or use a local SVG/photo/logo if you prefer -->
         <img
           class="logo-img"
           src="@/assets/robot_cat_engineer_true_silhouette_white.png"
@@ -18,6 +18,7 @@
         <router-link to="/about" exact-active-class="active">About</router-link>
         <router-link to="/projects" exact-active-class="active">Projects</router-link>
         <router-link to="/contact" exact-active-class="active">Contact</router-link>
+        <router-link to="/terminal" exact-active-class="active">Terminal</router-link>
       </nav>
     </div>
   </header>
@@ -69,7 +70,7 @@
   gap: 1.4em;
 }
 .nav a {
-  color: var(--text);
+  color: var(--gruvbox-bg);
   font-weight: 500;
   text-decoration: none;
   font-size: 1.07rem;
