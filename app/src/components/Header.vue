@@ -70,7 +70,7 @@
   gap: 1.4em;
 }
 .nav a {
-  color: var(--text);
+  color: var(--gruvbox-bg);
   font-weight: 500;
   text-decoration: none;
   font-size: 1.07rem;
