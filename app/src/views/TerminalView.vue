@@ -4,12 +4,13 @@ import { ref, onMounted } from 'vue'
 import V86 from "@/assets/v86/build/libv86.mjs";
 
 
-// These resolve to strings like `/assets/v86/build/v86-abc123.wasm`
+
 import wasmURL from "@/assets/v86/build/v86.wasm?url";
 import biosURL from "@/assets/v86/bios/seabios.bin?url";
 import vgaBiosURL from "@/assets/v86/bios/vgabios.bin?url";
-import cdromURL from "@/assets/v86/image/linux4/linux4.iso?url";
-import basefsURL from "@/assets/v86/image/linux4/fs.json?url";
+const bzimageURL = "/bzimage.bin";
+const initrdURL = "/initrd";
+
 
 onMounted(() => {
   console.log("mounted");
@@ -20,13 +21,11 @@ onMounted(() => {
     screen_container: document.getElementById("screen_container"),
     bios: { url: biosURL },
     vga_bios: { url: vgaBiosURL },
-    cdrom: { url: cdromURL },
-    filesystem: {
-      baseurl: basefsURL.replace(/fs\.json$/, ""), // removes fs.json if needed
-      basefs: basefsURL,
-    },
+
+    bzimage: { url: bzimageURL, },
+    initrd: { url: initrdURL },
+    cmdline: "rw root=/dev/ram init=/init, rdinit=/bin/sh",
     autostart: true,
-    cmdline: "rw root=host9p rootfstype=9p rootflags=trans=virtio,cache=loose modules=virtio_pci tsc=reliable",
   });
 });
 

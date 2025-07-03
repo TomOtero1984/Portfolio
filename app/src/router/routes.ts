@@ -7,11 +7,6 @@ import TerminalView from "@/views/TerminalView.vue";
 
 export const routes: Array<RouteRecordRaw> = [
   {
-    path: '/',
-    name: 'home',
-    component: HomeView,
-  },
-  {
     path: '/about',
     name: 'about',
     component: AboutView,
@@ -30,5 +25,10 @@ export const routes: Array<RouteRecordRaw> = [
     path: '/terminal',
     name: 'terminal',
     component: TerminalView,
+  },
+  {
+    path: '/',
+    name: 'home',
+    component: HomeView,
   }
 ];
