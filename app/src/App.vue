@@ -4,16 +4,16 @@ import Layout from '@/layouts/Layout.vue'
 <template>
   <div id="app">
     <Layout>
-      <router-view/>
+      <router-view class="content"/>
     </Layout>
   </div>
 </template>
 <style scoped>
 Layout {
-  height: 100%;
+  min-height: 100%;
 }
-#app {
-  height: 100vh;
+.content {
+  min-height: 100vh;
 }
 </style>
 

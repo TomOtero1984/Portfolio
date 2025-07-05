@@ -1,67 +1,31 @@
-<script setup lang="ts">
+<script setup>
+import ImaginationText from '@/components/animations/ImaginationText.vue'
+import ContentCard from "@/components/ContentCard.vue";
 </script>
 
 <template>
   <div class="about">
-    <h1>About Me</h1>
-    <div class="about-hero">
-      <!-- Replace with local profile photo if you like -->
+    <h1 class="about-title">About Me</h1>
+    <div class=about-header>
       <img class="about-photo" src="../assets/headshot.png" alt="Tom Otero headshot"/>
+      <h3 class="about-welcome" style="align-content: center;">
+        Hello and welcome to my
+        <ImaginationText> About Me </ImaginationText>
+        page!
+      </h3>
+    </div>
+    <ContentCard class="about-body">
       <section class="about-intro">
         <p>
-          Hi! I'm <strong>Tom Otero</strong>, a Build & Release Engineer with a background
-          in embedded systems and mechanical engineering. I specialize in automating
-          developer workflows, scaling CI/CD infrastructure, and supporting teams across
-          gaming, embedded hardware, and Linux-based systems. Based in Brooklyn, NY, I’ve
-          worked in both high-velocity environments and deeply technical domains, always
-          focused on making builds reproducible, deployments reliable, and engineering
-          smoother for everyone involved.
-        </p>
-
-        <p>
-          At <strong>Rockstar Games</strong>, I maintain and extend TeamCity-driven CI/CD
-          pipelines supporting a broad set of internal tools and developer workflows. My
-          work includes deploying assets across isolated networks via SSH and rsync,
-          managing Perforce/Git integrations, and supporting Windows and Linux
-          infrastructure. I’ve replaced legacy servers, migrated systems to WSL2-backed
-          environments, and documented build and release processes to make onboarding and
-          incident resolution easier for the whole team. When things go sideways, I
-          coordinate with developers, QA, project leads, and NOC to keep builds moving and
-          unblock teams during high-stakes releases.
-        </p>
-
-        <p>
-          Before that, I worked at <strong>Novus Labs</strong>, first as a mechanical
-          engineer, then as an embedded systems test engineer on the Cruise GM contract.
-          My mechanical work included designing RF testbeds for Alexa Bluetooth Mesh
-          certification and building firmware-synchronized microcontroller systems using
-          ATmega328P. I wrote automation scripts in Python and Bash to control
-          USB-over-SSH devices, Telnet power switches, and voice-triggered test scenarios
-          using sox and Google TTS. Later, I transitioned to embedded Linux
-          validation—developing Pytest frameworks for low-level drivers, building
-          latency-sensitive test harnesses with Raspberry Pi and Arduino, and managing
-          nightly CI pipelines using Jenkins and Buildkite. I delivered reproducible test
-          logs, regression data, and system-level benchmarks that helped firmware teams
-          move faster and break less.
-        </p>
-
-        <p>
-          Across every role, my focus is on improving reliability, maintainability, and
-          team productivity—whether that means refactoring flaky pipelines, automating a
-          testbed, or helping devs understand their build failures. I work best when I can
-          be hands-on with both the system and the people using it, bridging gaps between
-          engineering layers to keep teams moving.
-        </p>
-
-        <p>
-          I’m currently open to new roles in build systems, infrastructure engineering, or
-          embedded toolchains—especially in industries where reliability and iteration
-          speed both matter. If you're solving interesting problems at scale and need
-          someone to help your developers move faster without breaking things, I’d love to
-          talk.
+          My name is Tom Otero and I am an engineer. While the career path I've chosen
+          has specialized in software, my passion for engineering stems from an
+          unending curiosity of the world around me; and, the inevitable rabbit holes that
+          form when asking "how does this work?", "I wonder what would happen?", and
+          "wouldn't it be cool if we could... <i style="color: var(--monokai-pink);"> &#123;&#123; insert projects here
+            &#125;&#125;</i>"
         </p>
       </section>
-    </div>
+    </ContentCard>
   </div>
 </template>
 
@@ -70,20 +34,34 @@
   max-width: 800px;
   margin: 2rem auto;
   padding: 2rem;
-  background: var(--bg);
   border-radius: 12px;
-  box-shadow: var(--box-shadow);
+  display: grid;
+  grid-template-areas:
+    "about-title"
+    "about-header"
+    "about-body"
+    "about-links";
+  gap: 1rem;
 }
 
-.about-hero {
+.about-title {
+  display: grid;
+  grid-area: about-title;
+  font-size: 4rem;
+  font-weight: lighter;
+  text-align: center;
+  margin: 0
+}
+
+.about-header {
+  grid-area: about-header;
   display: flex;
-  align-items: flex-start;
-  gap: 2rem;
-  margin-top: 1.25rem;
-  flex-wrap: wrap;
+  align-items: center;
 }
-
 .about-photo {
+  display: flex;
+  align-items: center;
+  justify-content: left;
   flex-shrink: 0;
   width: 140px;
   height: 140px;
@@ -93,8 +71,14 @@
   background: var(--bg);
 }
 
-.about-intro {
-  flex: 1 1 300px;
+.about-welcome {
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+.about-body {
+  grid-area: about-body;
 }
 
 .about-links {

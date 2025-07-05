@@ -2,7 +2,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-family: 'Hack Nerd Font', Arial, sans-serif;
+  font-family: UbuntuNerdFontLight, sans-serif;
   background: var(--bg);
   color: var(--text);
 }
@@ -13,11 +13,40 @@ a {
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: 'Hack Nerd Font', Arial, sans-serif;
-  font-weight: 700;
+  font-family: 'TerminessNerdFont-Regular', Arial, sans-serif;
+  font-weight: lighter;
   color: var(--gruvbox-green);
 }
 
 * {
   box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Hack Nerd Font Mono';
+  src: url('./fonts/HackNerdFontMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'UbuntuNerdFontLight';
+  src: url('./fonts/UbuntuNerdFont-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'MononokiNerdFont-Regular';
+  src: url('./fonts/MononokiNerdFont-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TerminessNerdFont-Regular';
+  src: url('./fonts/TerminessNerdFont-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
