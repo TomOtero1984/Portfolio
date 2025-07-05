@@ -10,8 +10,6 @@
           src="@/assets/robot_cat_engineer_true_silhouette_white.png"
           alt="logo"
         />
-        <span class="brand-name">Tom Otero</span>
-        <span class="brand-role">Build & Release Engineer</span>
       </router-link>
       <nav class="nav">
         <router-link to="/" exact-active-class="active">Home</router-link>
@@ -101,7 +99,7 @@
   }
 }
 .logo-img {
-  max-width: 42px; /* or whatever size you want */
+  max-width: 42px;
   height: auto;
   display: block;
 }

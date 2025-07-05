@@ -10,15 +10,23 @@ onMounted(() => {
 
 </script>
 
-<template>
-  <Header/>
-  <main>
+<template class="layout">
+  <Header class="header"/>
+  <main class="main">
     <slot/>
   </main>
-  <Footer/>
+  <Footer class="footer"/>
 </template>
 
 <style scoped>
+.layout {
+  grid-template-areas:
+  "header"
+  "main"
+  "footer";
+
+;
+}
 Header {
   max-height: 10%;
 }

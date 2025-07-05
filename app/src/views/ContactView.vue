@@ -5,36 +5,38 @@ import ContentCard from "@/components/ContentCard.vue";
 <template>
   <div class="contact">
     <h1>Contact</h1>
-    <p class="contact-intro">
-      If you'd like to connect about engineering roles, automation, or collaborating on
-      build infrastructure projects, feel free to reach out!
-    </p>
-    <div class="contact-details">
-      <div class="contact-row">
-        <span class="contact-label">Email:</span>
-        <a href="mailto:tomotero1984@gmail.com" class="link"
-        >tomotero1984@gmail.com</a
-        >
-      </div>
-      <div class="contact-row">
-        <span class="contact-label">Phone:</span>
-        <a href="tel:+15039270633" class="link">(503) 927-0633</a>
-      </div>
-      <div class="contact-row">
-        <span class="contact-label">LinkedIn:</span>
-        <a
+    <ContentCard>
+      <p class="contact-intro">
+        If you'd like to connect about engineering roles, automation, or collaborating on
+        build infrastructure projects, feel free to reach out!
+      </p>
+      <div class="contact-details">
+        <div class="contact-row">
+          <span class="contact-label">Email:</span>
+          <a href="mailto:tomotero1984@gmail.com" class="link"
+          >tomotero1984@gmail.com</a
+          >
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">Phone:</span>
+          <a href="tel:+15039270633" class="link">(503) 927-0633</a>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">LinkedIn:</span>
+          <a
             href="https://linkedin.com/in/tomotero1984"
             class="link"
             target="_blank"
             rel="noopener"
-        >linkedin.com/in/tomotero1984</a
-        >
+          >linkedin.com/in/tomotero1984</a
+          >
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">Location:</span>
+          <span>Brooklyn, NY</span>
+        </div>
       </div>
-      <div class="contact-row">
-        <span class="contact-label">Location:</span>
-        <span>Brooklyn, NY</span>
-      </div>
-    </div>
+    </ContentCard>
   </div>
 </template>
 
@@ -43,9 +45,7 @@ import ContentCard from "@/components/ContentCard.vue";
   max-width: 600px;
   margin: 2rem auto;
   padding: 2.5rem 2rem;
-  background: var(--bg);
   border-radius: 12px;
-  box-shadow: var(--box-shadow);
 }
 
 h1 {
