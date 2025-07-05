@@ -1,36 +1,3 @@
-<style>
-  .title {
-    font-family: "Hack Nerd Font", serif;
-  }
-  .section {
-    text-align: center;
-    font-family: "Hack Nerd Font", serif;
-    font-size: 21px;
-    font-weight: lighter;
-  }
-  .instruct {
-    font-family: "Hack Nerd Font", serif;
-    font-size: 18px;
-    font-weight: lighter
-  }
-  h3 {
-    font-family: "Hack Nerd Font", serif;
-    font-size: 14px;
-    font-weight: normal;
-    font-style: italic;
-    padding-bottom: 0;
-  }
-  code {
-    color: lightgreen;
-    font-family: "Hack Nerd Font", serif;
-    font-weight: lighter;
-  }
-  p {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-</style>
 <h1 class="title" style="text-align: center;"> Portfolio App </h1>
 <hr>
 
