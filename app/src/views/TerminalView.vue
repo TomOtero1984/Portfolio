@@ -4,10 +4,11 @@ import { ref, onMounted } from 'vue'
 import V86 from "@/assets/v86/build/libv86.mjs";
 
 
-
 import wasmURL from "@/assets/v86/build/v86.wasm?url";
 import biosURL from "@/assets/v86/bios/seabios.bin?url";
 import vgaBiosURL from "@/assets/v86/bios/vgabios.bin?url";
+import ContentCard from "@/components/ContentCard.vue";
+
 const bzimageURL = "/bzimage.bin";
 const initrdURL = "/initrd";
 
@@ -32,14 +33,29 @@ onMounted(() => {
 </script>
 <template>
   <section class="terminal">
-    <div id="screen_container">
-      <div style="white-space: pre; font: 14px monospace; line-height: 14px">If you see this, try refreshing...</div>
-      <canvas style="display: none">If you see this, try refreshing...</canvas>
+    <div class="terminal-header">
+      <h1>Embedded Linux Kernel</h1>
     </div>
+    <ContentCard class="terminal-content">
+      <div id="screen_container">
+        <div style="white-space: pre; font: 14px monospace; line-height: 14px">If you see this, try refreshing...</div>
+        <canvas style="display: none">If you see this, try refreshing...</canvas>
+      </div>
+    </ContentCard>
   </section>
 </template>
 
 <style scoped>
+.terminal {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-areas:
+    "terminal-header"
+    "terminal-content";
+}
+
+
 #screen_container {
   display: block;
   background: black;

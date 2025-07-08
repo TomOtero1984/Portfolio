@@ -1,25 +1,24 @@
-<template>
-  <div class="wave-wrapper">
-    <span
-        v-for="(char, index) in letters"
-        :key="index"
-        class="wave-letter"
-        :style="{animationDelay: `${index * 0.2}s`}"
-        v-html="char === ' ' ? '&nbsp;' : char"
-    >
-    </span>
-  </div>
-</template>
-
 <script setup>
-import {computed} from 'vue'
-import {useSlots} from 'vue'
+import {computed, useSlots} from 'vue'
 
 const slots = useSlots()
 const text = computed(() => (slots.default ? slots.default()[0].children : 'Imagination'))
 
 const letters = computed(() => text.value.split(''))
 </script>
+
+<template>
+  <div class="wave-wrapper">
+    <span
+      v-for="(char, index) in letters"
+      :key="index"
+      class="wave-letter"
+      :style="{animationDelay: `${index * 0.2}s`}"
+      v-html="char === ' ' ? '&nbsp;' : char"
+    >
+    </span>
+  </div>
+</template>
 
 <style scoped>
 .wave-wrapper {
@@ -38,17 +37,18 @@ const letters = computed(() => text.value.split(''))
 }
 
 @keyframes wave-in {
-0%{
-  transform: translateY(0em);
-}
-50%{
-  transform: translateY(-1em);
-}
-100% {
-  transform: translateY(0em);
-}
+  0% {
+    transform: translateY(0em);
+  }
+  50% {
+    transform: translateY(-1em);
+  }
+  100% {
+    transform: translateY(0em);
+  }
 
 }
+
 @keyframes rainbow {
   0% {
     color: red;
@@ -72,7 +72,6 @@ const letters = computed(() => text.value.split(''))
     color: violet;
   }
 }
-
 
 
 </style>
