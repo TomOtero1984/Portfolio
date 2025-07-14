@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import MiniEngine from "@/components/MiniEngine.vue";
+import MiniEngine from "@/components/MiniEngine/MiniEngine.vue";
 </script>
 
 <template>
