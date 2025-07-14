@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
 // import CatRobot from "@/components/CatRobot.vue";
-import MiniEngine from "@/components/MiniEngine.vue";
+import MiniEngine from "@/components/MiniEngine/MiniEngine.vue";
 
 </script>
 
@@ -73,12 +73,12 @@ import MiniEngine from "@/components/MiniEngine.vue";
 
 MiniEngine {
   grid-column: 1;
-  width: inherit;
-  height: inherit;
-  display: flex;
-  position: relative;
+  width: 100%;
+  height: 100%;
+  position: static;
+  display: inline-flex;
+  justify-content: center;
   align-items: center;
-  outline: #1e1e1e dashed;
 }
 
 
