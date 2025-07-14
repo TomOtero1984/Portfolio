@@ -11,7 +11,8 @@ export const routes: Array<RouteRecordRaw> = [
     path: '/',
     name: 'home',
     component: HomeView,
-  },
+  
+  }
   {
     path: '/about',
     name: 'about',

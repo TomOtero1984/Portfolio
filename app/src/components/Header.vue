@@ -1,6 +1,8 @@
 <script setup lang="ts">
+
 // import CatRobot from "@/components/CatRobot.vue";
 import MiniEngine from "@/components/MiniEngine.vue";
+
 </script>
 
 <template>

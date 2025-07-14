@@ -10,8 +10,7 @@ const hover = ref(false);
 <template>
   <div class="about">
     <h1 class="about-title">About Me</h1>
-    <div class=about-header>
-      <h3 class="about-welcome" style="align-content: center;">
+    <div class=about-header>ss="about-welcome" style="align-content: center;">
         Hello and welcome to my
         <ImaginationText> About Me </ImaginationText>
         page!
@@ -24,6 +23,7 @@ const hover = ref(false);
           has specialized in software, my passion for engineering stems from an
           unending curiosity of the world around me; and, the inevitable rabbit holes that
           form when asking "how does this work?", "I wonder what would happen?", and
+
           "wouldn't it be cool if we could..."<br>
           <a href="https://github.com/TomOtero1984/ConC.GPT">
             <i style="color: var(--monokai-pink);">
@@ -70,6 +70,11 @@ const hover = ref(false);
   align-items: center;
 }
 
+.about-header {
+  grid-area: about-header;
+  display: flex;
+  align-items: center;
+}
 .about-photo {
   display: flex;
   align-items: center;

@@ -202,6 +202,22 @@ const markdownURL = "https://raw.githubusercontent.com/TomOtero1984/ConC.GPT/ref
   font-family: "TerminessNerdFont-Regular", Arial, sans-serif;
 }
 
-
-
+.home-headshot {
+  display: flex;
+  flex-shrink: 0;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+  background: var(--bg);
+}
+.home-subtitle {
+  padding: 0;
+  margin: 5px ;
+}
+.home-subtitle2 {
+  padding: 0;
+  margin: 5px ;
+}
 </style>

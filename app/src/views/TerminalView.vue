@@ -55,7 +55,6 @@ onMounted(() => {
     "terminal-content";
 }
 
-
 #screen_container {
   display: block;
   background: black;

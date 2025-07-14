@@ -73,5 +73,4 @@ const letters = computed(() => text.value.split(''))
   }
 }
 
-
 </style>
