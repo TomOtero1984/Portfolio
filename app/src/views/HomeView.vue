@@ -2,10 +2,8 @@
 import { ref } from 'vue'
 import ExplodingText from '@/components/animations/ExplodingText.vue'
 import ImaginationText from '@/components/animations/ImaginationText.vue'
-import Tooltip from "@/components/Tooltip.vue";
 import ContentCard from "@/components/ContentCard.vue";
 import FloatingMarkdown from '@/components/FloatingMarkdown.vue'
-import BIGText from "@/components/animations/BIGText.vue";
 
 const showMarkdown = ref(false)
 

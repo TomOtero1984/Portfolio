@@ -1,17 +1,18 @@
 <script setup lang="ts">
-import CatRobot from "@/components/CatRobot.vue";
-
+// import CatRobot from "@/components/CatRobot.vue";
+import MiniEngine from "@/components/MiniEngine.vue";
 </script>
 
 <template>
   <header class="site-header">
-    <CatRobot class="cat-robot-wrapper" alt="cat robot logo"/>
+    <MiniEngine/>
     <nav class="nav">
       <router-link to="/" exact-active-class="active">Home</router-link>
       <router-link to="/about" exact-active-class="active">About</router-link>
       <router-link to="/projects" exact-active-class="active">Projects</router-link>
       <router-link to="/contact" exact-active-class="active">Contact</router-link>
       <router-link to="/terminal" exact-active-class="active">Terminal</router-link>
+      <router-link to="/debug" exact-active-class="active">Debug</router-link>
     </nav>
   </header>
 </template>
@@ -67,12 +68,13 @@ import CatRobot from "@/components/CatRobot.vue";
   color: var(--monokai-pink);
   border-bottom: 2px solid var(--monokai-pink);
 }
-.cat-robot-wrapper {
+
+MiniEngine {
   grid-column: 1;
-  display: flex;
-  position: relative;
   width: inherit;
   height: inherit;
+  display: flex;
+  position: relative;
   align-items: center;
   outline: #1e1e1e dashed;
 }
