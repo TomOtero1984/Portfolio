@@ -1,14 +1,17 @@
-<script setup>
+<script setup lang="ts">
+import { ref } from 'vue'
+
 import ImaginationText from '@/components/animations/ImaginationText.vue'
 import ContentCard from "@/components/ContentCard.vue";
+
+const hover = ref(false);
 </script>
 
 <template>
   <div class="about">
     <h1 class="about-title">About Me</h1>
-    <div class=about-header>
-      <img class="about-photo" src="../assets/headshot.png" alt="Tom Otero headshot"/>
-      <h3 class="about-welcome" style="align-content: center;">
+    <div class=about-header>ss="about-welcome" style="align-content: center;">
+      <h3 class="about-welcome">
         Hello and welcome to my
         <ImaginationText> About Me </ImaginationText>
         page!
@@ -21,8 +24,17 @@ import ContentCard from "@/components/ContentCard.vue";
           has specialized in software, my passion for engineering stems from an
           unending curiosity of the world around me; and, the inevitable rabbit holes that
           form when asking "how does this work?", "I wonder what would happen?", and
-          "wouldn't it be cool if we could... <i style="color: var(--monokai-pink);"> &#123;&#123; insert projects here
-            &#125;&#125;</i>"
+
+          "wouldn't it be cool if we could..."<br>
+          <a href="https://github.com/TomOtero1984/ConC.GPT">
+            <i style="color: var(--monokai-pink);">
+              &#123;&#123;
+              <span @mouseover="hover = true" @mouseleave="hover = false">
+                    {{ hover ? 'https://github.com/TomOtero1984/ConC.GPT' : 'insert projects here' }}
+              </span>
+              &#125;&#125;
+            </i>
+          </a>
         </p>
       </section>
     </ContentCard>
@@ -51,6 +63,12 @@ import ContentCard from "@/components/ContentCard.vue";
   font-weight: lighter;
   text-align: center;
   margin: 0
+}
+
+.about-header {
+  grid-area: about-header;
+  display: flex;
+  align-items: center;
 }
 
 .about-header {

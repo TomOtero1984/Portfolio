@@ -4,8 +4,15 @@ import AboutView from "@/views/AboutView.vue";
 import ProjectsView from "@/views/ProjectsView.vue";
 import ContactView from "@/views/ContactView.vue";
 import TerminalView from "@/views/TerminalView.vue";
+import DebugView from "@/views/DebugView.vue";
 
 export const routes: Array<RouteRecordRaw> = [
+  {
+    path: '/',
+    name: 'home',
+    component: HomeView,
+  
+  },
   {
     path: '/about',
     name: 'about',
@@ -27,8 +34,8 @@ export const routes: Array<RouteRecordRaw> = [
     component: TerminalView,
   },
   {
-    path: '/',
-    name: 'home',
-    component: HomeView,
+    path: '/debug',
+    name: 'debug',
+    component: DebugView,
   }
 ];

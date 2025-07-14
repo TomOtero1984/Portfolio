@@ -66,8 +66,7 @@ function getExplosionStyle(letter: Letter) {
 }
 
 function getResetStyle(letters: Letter[]) {
-  const letters_unpacked_because_aahhhhh_ts_and_vue_make_me_want_to_die = letters;
-  for (const letter of letters_unpacked_because_aahhhhh_ts_and_vue_make_me_want_to_die) {
+  for (const letter of letters) {
     letter.transform = 'translate(0, 0) rotate(0deg) scale(1)';
     letter.opacity = 1;
     letter.transition = 'transform 0.5s ease-in, opacity 0.5s ease-in';
