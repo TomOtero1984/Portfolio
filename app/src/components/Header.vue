@@ -3,6 +3,7 @@
 // import CatRobot from "@/components/CatRobot.vue";
 import MiniEngine from "@/components/MiniEngine/MiniEngine.vue";
 
+
 </script>
 
 <template>
@@ -79,6 +80,7 @@ MiniEngine {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+
 }
 
 
