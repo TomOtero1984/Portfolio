@@ -112,6 +112,5 @@ onMounted(() => {
   width: inherit;
   position: inherit;
   display: inherit;
-  border: 1px solid #ccc;
 }
 </style>
