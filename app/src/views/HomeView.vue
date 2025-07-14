@@ -49,38 +49,6 @@ const markdownURL = "https://raw.githubusercontent.com/TomOtero1984/ConC.GPT/ref
         </strong>
         <FloatingMarkdown :url="markdownURL" :visible="showMarkdown" @close="showMarkdown = false"/>
       </p>
-      <div class="hc-highlights">
-        <h3 class="hc-quoted-title">
-          “What Is and What Should Never Be”
-          <span class="cite">— Led Zeppelin</span>
-        </h3>
-        <p class="section-subtle">
-          Or: what I actually do with my time.
-        </p>
-        <ul>
-          <li>
-            Design testbeds for voice/RF hardware using Raspberry Pi
-            and Python.
-          </li>
-          <li>
-            Automate multi-platform releases with TeamCity, MSBuild,
-            and Perforce.
-          </li>
-          <li>
-            Write symbolic compression tools in Rust (because why
-            not).
-          </li>
-          <li>
-            Build containers that talk to each other better than
-            most teams do.
-          </li>
-        </ul>
-      </div>
-      <blockquote class="hc-motivational-quote" style="text-align: left; justify-content: center">
-        <h3>”__repr__ is love. __getitem__ is life.”</h3>
-        <p style="text-align: left; padding-left: 4rem;">——ChatGPT</p>
-        <p style="padding-left: 8rem;">...after I compared TypeScript to Python</p>
-      </blockquote>
     </ContentCard>
   </section>
 </template>
