@@ -1,0 +1,33 @@
+import { vec2 } from "gl-matrix";
+
+type Mouse = {
+  //element.addEventListener('mousemove', (event) => {
+  //   const rect = element.getBoundingClientRect();
+  //   const x = event.clientX - rect.left;
+  //   const y = event.clientY - rect.top;
+  //   console.log(`Mouse relative to element: (${x}, ${y})`);
+  // });
+  position: vec2;
+  delta: vec2;
+  isDown: boolean;
+  update: (event: MouseEvent) => void;
+};
+
+export function createMouse(): Mouse {
+  const position = vec2.create();
+  const last = vec2.create();
+  const delta = vec2.create();
+  let isDown = false;
+
+  const update = (event: MouseEvent) => {
+    vec2.copy(last, position);
+    vec2.set(position, event.clientX, event.clientY);
+    vec2.sub(delta, position, last);
+  };
+
+  window.addEventListener('mousemove', update);
+  window.addEventListener('mousedown', () => isDown = true);
+  window.addEventListener('mouseup', () => isDown = false);
+
+  return { position, delta, isDown, update };
+}
