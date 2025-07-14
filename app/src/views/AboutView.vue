@@ -11,6 +11,7 @@ const hover = ref(false);
   <div class="about">
     <h1 class="about-title">About Me</h1>
     <div class=about-header>ss="about-welcome" style="align-content: center;">
+      <h3 class="about-welcome">
         Hello and welcome to my
         <ImaginationText> About Me </ImaginationText>
         page!
