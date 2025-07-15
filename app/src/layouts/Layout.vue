@@ -32,7 +32,7 @@ Header {
 }
 
 main {
-  min-height: 75%;
+  min-height: 80%;
 }
 
 Footer {

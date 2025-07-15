@@ -35,13 +35,32 @@ onMounted(() => {
   <section class="terminal">
     <div class="terminal-header">
       <h1>Embedded Linux Kernel</h1>
+      <p>
+        The application below is a fully functional Linux kernel running in the browser. This application is purely
+        client-side and does not communicate with any servers. As in, yes! You are currently running an operating system
+        entirely in your browser.
+      </p>
     </div>
+    <!--    <hr>-->
+    <!--    <br><br>-->
     <ContentCard class="terminal-content">
       <div id="screen_container">
         <div style="white-space: pre; font: 14px monospace; line-height: 14px">If you see this, try refreshing...</div>
         <canvas style="display: none">If you see this, try refreshing...</canvas>
       </div>
     </ContentCard>
+    <!--    <br><br>-->
+    <!--    <hr>-->
+
+    <div class="credits">
+      <h4 style="padding-bottom: 0; margin-bottom: 0;">Credits:</h4>
+      <ul>
+        <li>
+          This application is made possible by the <a href="https://github.com/copy/v86">V86 emulator</a>, an
+          x86 PC emulator and x86-to-wasm JIT, running in the browser.
+        </li>
+      </ul>
+    </div>
   </section>
 </template>
 
@@ -55,8 +74,37 @@ onMounted(() => {
     "terminal-content";
 }
 
+.terminal-header {
+  grid-area: terminal-header;
+  max-width: 800px;
+  align-content: center;
+  justify-content: center;
+  text-align: left;
+  padding: 10px;
+}
+.terminal-header h1 {
+  text-align: center;
+}
+
+.terminal-content {
+  grid-area: terminal-content;
+  max-width: 800px;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 #screen_container {
   display: block;
   background: black;
+  align-self: center;
+}
+
+hr {
+  width: 90%;
+  color: var(--gruvbox-green);
+  box-shadow: 0 0 10px var(--gruvbox-green);
 }
 </style>
