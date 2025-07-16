@@ -35,11 +35,13 @@ import MiniEngine from "@/components/MiniEngine/MiniEngine.vue";
 <style scoped>
 .debug {
   background-color: black;
-  width: 100%;
-  height: 100%;
   position: relative;
   display: grid;
+  height: 100%;
+  width: 100%;
   justify-content: center;
+  justify-items: center;
+  align-content: center;
   align-items: center;
   grid-template-areas:
   "debug-header"
@@ -49,10 +51,10 @@ import MiniEngine from "@/components/MiniEngine/MiniEngine.vue";
 }
 .debug-header {
   grid-area: debug-header;
-  margin-top: 0;
-  max-width: 800px;
-  max-height: 600px;
+  width: 75%;
   justify-content: center;
+  justify-items: center;
+  align-content: center;
   align-items: center;
   text-align: left;
 }
@@ -62,9 +64,10 @@ import MiniEngine from "@/components/MiniEngine/MiniEngine.vue";
 
 .debug-content{
   grid-area: debug-content;
-  width: 800px;
-  height: 400px;
   display: flex;
+  flex-direction: column;
+  width: 75%;
+  height: 75%;
   justify-content: center;
   justify-items: center;
   align-items: center;
@@ -78,8 +81,6 @@ MiniEngine {
 }
 .debug-description {
   grid-area: debug-description;
-  max-width: 800px;
-  max-height: 600px;
   justify-content: center;
   align-items: center;
   text-align: left;
