@@ -33,6 +33,7 @@ Header {
 
 main {
   min-height: 80%;
+  line-height: 1.7;
 }
 
 Footer {

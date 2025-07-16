@@ -10,7 +10,7 @@ import MiniEngine from "@/components/MiniEngine/MiniEngine.vue";
         This page was initially being used to debug the physics engine I strapped to my logo (yes I know it's overkill),
         but I figured I'd leave it up because why not show you all what I'm working on! It also seemed like a place (not
         sure
-        if it's a <i>good</i> place, but certain <i><b>a</b></i> place) to list future plans.
+        if it's a <i>good</i> place, but certainly <i><b>a</b></i> place) to list future plans.
       </p>
     </div>
 
@@ -26,7 +26,7 @@ import MiniEngine from "@/components/MiniEngine/MiniEngine.vue";
         <li> Add interactive, drag and drop controls for CatRobot.</li>
         <li> Add interactive, drag and drop controls to terminal? 🤔</li>
         <li> Test new animations: idle, jump, crouch, etc...</li>
-        <li> Add more animations to the terminal.(this one was AI generated but I agree)</li>
+        <li> Add more animations to the terminal (this one was AI generated but I agree).</li>
       </ul>
     </div>
   </div>
@@ -84,4 +84,5 @@ MiniEngine {
   align-items: center;
   text-align: left;
 }
+
 </style>
