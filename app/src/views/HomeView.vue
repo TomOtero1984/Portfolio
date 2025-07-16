@@ -7,7 +7,7 @@ import FloatingMarkdown from '@/components/FloatingMarkdown.vue'
 
 const showMarkdown = ref(false)
 
-const markdownURL = "https://raw.githubusercontent.com/TomOtero1984/ConC.GPT/refs/heads/main/docs/conc/concgpt_project_summary.txt"
+const markdownURL = "https://raw.githubusercontent.com/TomOtero1984/ConC.GPT/refs/heads/main/docs/conc/architecture_layers.md"
 </script>
 
 <template>
