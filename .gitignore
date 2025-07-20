@@ -11,4 +11,4 @@ node_modules
 .generated
 Resume/private/
 .editorconfig
-portfolio.sublime.project
+portfolio.sublime-**

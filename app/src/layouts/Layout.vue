@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
-import Header from "@/components/Header.vue";
+import NavBar from "@/components/NavBar.vue";
 import Footer from "@/components/Footer.vue";
 import { applyTheme } from "@/theme/themes";
 
@@ -11,7 +11,7 @@ onMounted(() => {
 </script>
 
 <template class="layout">
-  <Header class="header"/>
+  <NavBar class="navbar"/>
   <main class="main">
     <slot/>
   </main>
@@ -21,13 +21,13 @@ onMounted(() => {
 <style scoped>
 .layout {
   grid-template-areas:
-  "header"
+  "navbar"
   "main"
   "footer";
 
 ;
 }
-Header {
+NavBar {
   max-height: 10%;
 }
 

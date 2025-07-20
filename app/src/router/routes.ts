@@ -2,6 +2,7 @@ import { RouteRecordRaw } from "vue-router";
 import HomeView from "@/views/HomeView.vue";
 import AboutView from "@/views/AboutView.vue";
 import ProjectsView from "@/views/ProjectsView.vue";
+import BlogView from "@/views/BlogView.vue";
 import ContactView from "@/views/ContactView.vue";
 import TerminalView from "@/views/TerminalView.vue";
 import DebugView from "@/views/DebugView.vue";
@@ -11,7 +12,7 @@ export const routes: Array<RouteRecordRaw> = [
     path: '/',
     name: 'home',
     component: HomeView,
-  
+
   },
   {
     path: '/about',
@@ -19,14 +20,14 @@ export const routes: Array<RouteRecordRaw> = [
     component: AboutView,
   },
   {
+    path: `/blog`,
+    name: 'blog',
+    component: BlogView,
+  },
+  {
     path: '/projects',
     name: 'projects',
     component: ProjectsView,
-  },
-  {
-    path: '/contact',
-    name: 'contact',
-    component: ContactView,
   },
   {
     path: '/terminal',
@@ -37,5 +38,10 @@ export const routes: Array<RouteRecordRaw> = [
     path: '/debug',
     name: 'debug',
     component: DebugView,
-  }
+  },
+  {
+    path: '/contact',
+    name: 'contact',
+    component: ContactView,
+  },
 ];
