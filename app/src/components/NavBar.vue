@@ -2,26 +2,20 @@
 import { ref } from 'vue'
 import MiniEngine from "@/components/MiniEngine/MiniEngine.vue";
 import NavLinks from "@/components/NavLinks.vue";
+import TerminalMenu from "@/components/TerminalMenu.vue";
 
-const isOpen = ref(false);
-const toggleMenu = () => isOpen.value = !isOpen.value;
+const visible = ref(false);
+function menuButton (){
+  visible.value = !visible.value;
+}
+
 </script>
 
 <template>
   <header class="navbar">
     <MiniEngine/>
-    <!-- Desktop Nav -->
-    <div class="desktop-nav">
-      <NavLinks/>
-    </div>
-
-    <!-- Hamburger -->
-    <button class="hamburger" @click="toggleMenu">☰</button>
-
-    <!-- Mobile Dropdown -->
-    <div v-if="isOpen" class="mobile-nav">
-      <NavLinks/>
-    </div>
+    <button @click=menuButton() class="menu-button">MENU</button>
+    <TerminalMenu :visible=visible @close="visible = false"/> />
   </header>
 </template>
 
@@ -37,10 +31,47 @@ const toggleMenu = () => isOpen.value = !isOpen.value;
   background: var(--accent);
   color: var(--gruvbox-bg-light);
   box-shadow: 0 2px 10px black;
-  grid-template-columns: minmax(100px, 1fr) auto;
+  grid-template-columns: minmax(100px, 1fr) auto auto;
   gap: 1em;
   z-index: 50;
 }
+
+MiniEngine {
+  grid-column: 1;
+  width: 100%;
+  height: 100%;
+  position: static;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+TerminalMenu {
+  grid-column: 2;
+}
+
+.menu-button {
+  grid-column: 3;
+  position: relative;
+  margin-right: 2rem;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--gruvbox-green);
+  background: var(--monokai-pink);
+  border: 4px outset var(--monokai-pink);
+  font-family: "TerminessNerdFont-Regular", "Courier New", Courier, monospace;;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.menu-button:active {
+  color: var(--gruvbox-bg);
+  background: var(--monokai-pink);
+  border: 4px inset var(--monokai-purple);
+}
+
+
 .nav-shadow {
   position: absolute;
   top: 100%;
@@ -56,36 +87,10 @@ const toggleMenu = () => isOpen.value = !isOpen.value;
 .desktop-nav {
   display: none;
 }
-.hamburger {
-  font-size: 2rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-.mobile-nav {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background: var(--accent);
-  color: var(--gruvbox-bg-light);
-  box-shadow:
-    0 8px 10px -2px var(--monokai-pink),
-    0 -2px 10px 2px var(--monokai-pink);
-  padding: 1rem;
-  z-index: 30;
-}
 
-/* Show desktop nav on large screens */
-@media (min-width: 768px) {
-  .desktop-nav {
-    display: block;
-  }
-  .hamburger,
-  .mobile-nav {
-    display: none;
-  }
-}
+
+
+
 
 
 .header-content {
@@ -96,16 +101,7 @@ const toggleMenu = () => isOpen.value = !isOpen.value;
 }
 
 
-MiniEngine {
-  grid-column: 1;
-  width: 100%;
-  height: 100%;
-  position: static;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
 
-}
 
 
 @media (max-width: 700px) {
@@ -119,3 +115,26 @@ MiniEngine {
 }
 
 </style>
+
+<!--/* Show desktop nav on large screens */-->
+<!--@media (min-width: 768px) {-->
+<!--.desktop-nav {-->
+<!--display: block;-->
+<!--}-->
+<!--.menu-button,-->
+<!--.mobile-nav {-->
+<!--display: none;-->
+<!--}-->
+<!--}-->
+
+<!--.mobile-nav {-->
+<!--position: absolute;-->
+<!--top: 100%;-->
+<!--left: 0;-->
+<!--right: 0;-->
+<!--background: var(&#45;&#45;accent);-->
+<!--color: var(&#45;&#45;gruvbox-bg-light);-->
+<!--box-shadow: 0 4px 10px -4px var(&#45;&#45;monokai-pink);-->
+<!--padding: 1rem;-->
+<!--z-index: 30;-->
+<!--}-->
