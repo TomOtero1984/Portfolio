@@ -15,7 +15,7 @@ function menuButton (){
   <header class="navbar">
     <MiniEngine/>
     <button @click=menuButton() class="menu-button">MENU</button>
-    <TerminalMenu :visible=visible @close="visible = false"/> />
+    <TerminalMenu :visible=visible @close="visible = false"/>
   </header>
 </template>
 
