@@ -4,10 +4,10 @@ import { ref, watch, nextTick,
   onBeforeUnmount } from 'vue';
 import { useRouter } from 'vue-router';
 
-defineProps<{
+const props = defineProps<{
   visible: boolean,
+  excludeElements?: (HTMLElement | null)[]
 }>()
-
 
 const router = useRouter()
 
@@ -89,13 +89,17 @@ const emit = defineEmits<{
   (e: 'close'): void
 }>()
 
+
+
 function handleClickOutside(event: MouseEvent) {
-  if (
-    terminalRef.value &&
-    !terminalRef.value.contains(event.target as Node)
-  ) {
-    emit('close')
+  const target = event.target as Node
+  const safe = [terminalRef.value, ...(props.excludeElements ?? [])]
+
+  for (const el of safe) {
+    if (el && el.contains(target)) return
   }
+
+  emit('close')
 }
 
 onMounted(() => {

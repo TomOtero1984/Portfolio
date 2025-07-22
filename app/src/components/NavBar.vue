@@ -5,6 +5,8 @@ import NavLinks from "@/components/NavLinks.vue";
 import TerminalMenu from "@/components/TerminalMenu.vue";
 
 const visible = ref(false);
+const menuButtonRef = ref<HTMLElement | null>(null)
+
 function menuButton (){
   visible.value = !visible.value;
 }
@@ -14,15 +16,20 @@ function menuButton (){
 <template>
   <header class="navbar">
     <MiniEngine/>
-    <button @click=menuButton() class="menu-button">MENU</button>
-    <TerminalMenu :visible=visible @close="visible = false"/>
+    <button ref="menuButtonRef" @click=menuButton() class="menu-button">MENU</button>
+    <TerminalMenu
+      :visible=visible
+      :exclude-elements="[menuButtonRef]"
+      @close="visible = false"
+    />
   </header>
 </template>
 
 <style scoped>
 .navbar {
   position: sticky;
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(100px, 1fr) auto auto;
   top: 0;
   left: 0;
   z-index: 50;
@@ -45,10 +52,12 @@ MiniEngine {
   align-items: center;
   align-self: center;
 }
-
+ TerminalMenu {
+   grid-column: 2;
+ }
 
 .menu-button {
-  grid-column: 2;
+  grid-column: 3;
   position: relative;
   margin-right: 2rem;
   width: 60px;
