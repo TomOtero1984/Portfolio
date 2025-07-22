@@ -164,6 +164,7 @@ onBeforeUnmount(() => {
   justify-self: center;
 }
 
+
 .terminal-window {
   padding: 0.5em;
   width: 100%;
@@ -177,26 +178,19 @@ onBeforeUnmount(() => {
   margin: 0;
   line-height: 1.5em;
 }
-
-.menu-text {
-  justify-self: center;
-  text-align: center;
+.terminal-line a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}
+.terminal-line a:hover {
+  text-decoration: underline;
 }
 
-.cursor {
-  animation: blink 1s step-end infinite;
-}
-
-.menu-button {
-  font-size: 2rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-@keyframes blink {
-  50% {
-    opacity: 0;
+@media (max-width: 600px) {
+  .terminal-overlay {
+    max-width: 400px;
+    max-height: 300px;
   }
 }
 </style>

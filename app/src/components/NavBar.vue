@@ -22,8 +22,10 @@ function menuButton (){
 <style scoped>
 .navbar {
   position: sticky;
-  display: grid;
+  display: flex;
   top: 0;
+  left: 0;
+  z-index: 50;
   height: 64px;
   width: 100%;
   padding: 0 0;
@@ -31,27 +33,22 @@ function menuButton (){
   background: var(--accent);
   color: var(--gruvbox-bg-light);
   box-shadow: 0 2px 10px black;
-  grid-template-columns: minmax(100px, 1fr) auto auto;
   gap: 1em;
-  z-index: 50;
 }
 
 MiniEngine {
-  grid-column: 1;
+  position:relative;
+  display: flex;
   width: 100%;
   height: 100%;
-  position: static;
-  display: inline-flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
+  align-self: center;
 }
 
-TerminalMenu {
-  grid-column: 2;
-}
 
 .menu-button {
-  grid-column: 3;
+  grid-column: 2;
   position: relative;
   margin-right: 2rem;
   width: 60px;
@@ -70,36 +67,6 @@ TerminalMenu {
   background: var(--monokai-pink);
   border: 4px inset var(--monokai-purple);
 }
-
-
-.nav-shadow {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  height: 10px;
-  background: var(--monokai-pink);
-  filter: blur(8px);
-  z-index: 0;
-}
-
-
-.desktop-nav {
-  display: none;
-}
-
-
-
-
-
-
-.header-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1080px;
-}
-
 
 
 

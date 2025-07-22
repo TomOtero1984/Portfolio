@@ -162,30 +162,18 @@ const markdownURL = "https://raw.githubusercontent.com/TomOtero1984/ConC.GPT/ref
   margin: 0;
 }
 
-.hc-highlights {
-  grid-area: hc-highlights;
-  display: grid;
-  grid-template-rows: auto auto auto;
-  text-align: left;
-  font-family: "TerminessNerdFont-Regular", Arial, sans-serif;
+@media (max-width: 800px) {
+  .hm-hdr-title {
+    text-wrap: nowrap;
+  }
+
+  .hm-hdr-subtitle {
+      font-size: 1.2rem;
+    }
+
+    .hm-hdr-subtitle2{
+      font-size: 1.2rem;
+  }
 }
 
-.home-headshot {
-  display: flex;
-  flex-shrink: 0;
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid var(--accent);
-  background: var(--bg);
-}
-.home-subtitle {
-  padding: 0;
-  margin: 5px ;
-}
-.home-subtitle2 {
-  padding: 0;
-  margin: 5px ;
-}
 </style>

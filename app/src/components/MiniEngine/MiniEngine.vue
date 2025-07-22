@@ -25,7 +25,6 @@ onMounted(() => {
 </script>
 
 <template>
-  <!--  <canvas ref="canvasRef"/>-->
   <canvas class="mini-engine" ref="canvasRef"/>
 </template>
 
