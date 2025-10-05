@@ -98,16 +98,23 @@ function handleClickOutside(event: MouseEvent) {
   for (const el of safe) {
     if (el && el.contains(target)) return
   }
-
   emit('close')
+}
+
+function handleEscKey(event: KeyboardEvent) {
+  if (event.key === 'Escape') {
+    emit('close')
+  }
 }
 
 onMounted(() => {
   document.addEventListener('mousedown', handleClickOutside)
+  document.addEventListener('keypress', handleEscKey)
 })
 
 onBeforeUnmount(() => {
   document.removeEventListener('mousedown', handleClickOutside)
+  document.removeEventListener('keypress', handleEscKey)
 })
 
 </script>
