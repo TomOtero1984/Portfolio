@@ -1,37 +1,50 @@
-<!-- src/components/MarkdownPlayground.vue -->
 <script setup>
-import {ref} from 'vue'
-import MarkdownIt from 'markdown-it'
+import { ref, watch, computed } from "vue";
+import MarkdownIt from "markdown-it";
 
-const md = new MarkdownIt()
-const editing = ref(false)
+const md = new MarkdownIt();
+const props = defineProps({
+  text: {
+    type: String,
+    default: `# 🧠 creative acceleration log\n\n- learned rust\n- built things\n`,
+  },
+});
 
-const defaultText =
-  `# 🧠 Creative Acceleration Log
+const emit = defineEmits(["update:text"]);
 
-- Learned Rust
-- Built a Linux kernel
-- Started Oyster
-- Embedded a Linux VM into a webpage
-`
-const markdown = ref(defaultText)
+const editing = ref(false);
+const markdown = ref(props.text);
+
+watch(
+  () => props.text,
+  (v) => {
+    if (!editing.value) markdown.value = v ?? "";
+  },
+);
+
+const textProxy = computed({
+  get: () => markdown.value,
+  set: (v) => {
+    markdown.value = v;
+    emit("update:text", v);
+  },
+});
 
 const toggleEdit = () => {
-  editing.value = !editing.value
-}
+  editing.value = !editing.value;
+};
 </script>
 
 <template>
   <div class="markdown-playground">
     <button @click="toggleEdit">
-      {{ editing ? '🔒 Preview' : '✍️ Edit' }}
+      {{ editing ? "🔒 Preview" : "✍️ Edit" }}
     </button>
-
+    <slot></slot>
     <div v-if="editing">
-      <textarea v-model="markdown" class="editor"/>
+      <textarea v-model="textProxy" class="editor" />
     </div>
-
-    <div class="preview" v-html="md.render(markdown)"/>
+    <div class="preview" v-html="md.render(markdown)" />
   </div>
 </template>
 

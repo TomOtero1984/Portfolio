@@ -33,7 +33,7 @@ import ContentCard from "@/components/ContentCard.vue";
         </div>
         <div class="contact-row">
           <span class="contact-label">Location:</span>
-          <span>Brooklyn, NY</span>
+          <span>Los Angeles, CA</span>
         </div>
       </div>
     </ContentCard>

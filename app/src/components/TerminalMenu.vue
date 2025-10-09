@@ -21,7 +21,7 @@ const output = ref<TerminalLine[]>([
   { html: '│ [1] <a href="/">cd home        ─ Go Home</a>  │' },
   { html: '│ [2] <a href="/about">cd about       ─ About Me</a> │' },
   { html: '│ [3] <a href="/projects">cd projects    ─ Projects</a> │' },
-  { html: '│ [4] <a href="/blog">cd blog        ─ Blog</a>     │' },
+  { html: '│ [4] <a href="/conc">cd conc        ─ ConC</a>     │' },
   { html: '│ [5] <a href="/terminal">cd terminal    ─ Terminal</a> │' },
   { html: '│ [6] <a href="/debug">cd debug       ─ debug</a>    │' },
   { html: '│ [7] <a href="/contact">cd contact     ─ Contact</a>  │' },
@@ -51,9 +51,9 @@ function runCommand() {
   } else if (command.value === 'cd about') {
     output.value.push({ text:'Navigating to About page...'})
     router.push('/about')
-  } else if (command.value === 'cd blog') {
-    output.value.push({ text:'Navigating to Blog page...'})
-    router.push('/blog')
+  } else if (command.value === 'cd conc') {
+    output.value.push({ text:'Navigating to ConC page...'})
+    router.push('/conc')
   } else if (command.value === 'cd projects') {
     output.value.push({ text:'Navigating to Projects page...'})
     router.push('/projects')
@@ -64,7 +64,10 @@ function runCommand() {
     output.value.push({ text:'Navigating to Debug page...'})
     router.push('/debug')
   } else if (command.value === 'cd contact') {
-    output.value.push({ text:'Navigating to Contact page...'})
+    output.value.push({ text:'navigating to contact page...'})
+    router.push('/contact')
+  }else if (command.value === 'cd contact') {
+    output.value.push({ text:'navigating to contact page...'})
     router.push('/contact')
   } else if (command.value === 'cd') {
     output.value.push({ text:'Usage: cd [directory]'})

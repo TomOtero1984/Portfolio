@@ -6,42 +6,47 @@ import BlogView from "@/views/BlogView.vue";
 import ContactView from "@/views/ContactView.vue";
 import TerminalView from "@/views/TerminalView.vue";
 import DebugView from "@/views/DebugView.vue";
+import ConcView from "@/views/ConcView.vue";
 
 export const routes: Array<RouteRecordRaw> = [
   {
-    path: '/',
-    name: 'home',
+    path: "/",
+    name: "home",
     component: HomeView,
-
   },
   {
-    path: '/about',
-    name: 'about',
+    path: "/about",
+    name: "about",
     component: AboutView,
   },
   {
     path: `/blog`,
-    name: 'blog',
+    name: "blog",
     component: BlogView,
   },
   {
-    path: '/projects',
-    name: 'projects',
+    path: "/projects",
+    name: "projects",
     component: ProjectsView,
   },
   {
-    path: '/terminal',
-    name: 'terminal',
+    path: "/terminal",
+    name: "terminal",
     component: TerminalView,
   },
   {
-    path: '/debug',
-    name: 'debug',
+    path: `/conc`,
+    name: `conc`,
+    component: ConcView,
+  },
+  {
+    path: "/debug",
+    name: "debug",
     component: DebugView,
   },
   {
-    path: '/contact',
-    name: 'contact',
+    path: "/contact",
+    name: "contact",
     component: ContactView,
   },
 ];
