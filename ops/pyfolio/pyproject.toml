@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyfolio"
+version = "0.0.1"
+description = "Python scripts supporting the Portfolio app"
+readme = "README.md"
+authors = [
+  { name = "Tom Otero", email = "tomotero1984@gmail.com"}
+]
+requires-python = ">=3.12"
+dependencies = [
+  "pip"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

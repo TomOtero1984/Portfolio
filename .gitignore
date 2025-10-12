@@ -12,3 +12,6 @@ node_modules
 Resume/private/
 .editorconfig
 portfolio.sublime-**
+__pycache__
+pyfolio.egg*
+.zed
