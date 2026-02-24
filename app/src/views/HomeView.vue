@@ -41,13 +41,21 @@ const markdownURL = "https://raw.githubusercontent.com/TomOtero1984/ConC.GPT/ref
         <br><br>
         Having designed solutions and shipped products across such a wide range of domains, I’ve honed a systematic,
         creative, and domain-agnostic approach to problem solving.
-        <br><br>
-        <strong>The roles I am best suited for value
-          <i class="hc-intro-flmd" @click="showMarkdown=true">first-principles thinking, architectural problem
-            solving</i>, and teams
-          that embrace diversity, adaptability, and curiosity.
+
+<!--        <strong>The roles I am best suited for value-->
+<!--          <i class="hc-intro-flmd" @click="showMarkdown=true">first-principles thinking, architectural problem-->
+<!--            solving</i>, and teams-->
+<!--          that embrace diversity, adaptability, and curiosity.-->
+<!--        </strong>-->
+<!--        <FloatingMarkdown :url="markdownURL" :visible="showMarkdown" @close="showMarkdown = false"/>-->
+      </p>
+      <p style="text-align: center;">
+        <strong>
+          In an era where code can be generated at an unprecedented pace,
+          the real challenge has shifted from producing syntax to ensuring structural integrity.
+          Without a deliberate architectural foundation, rapid development eventually collapses under the weight of its own technical debt.
+          AI is excellent at manufacturing the bricks, but it takes an engineer to build a structure that stands.
         </strong>
-        <FloatingMarkdown :url="markdownURL" :visible="showMarkdown" @close="showMarkdown = false"/>
       </p>
     </ContentCard>
   </section>

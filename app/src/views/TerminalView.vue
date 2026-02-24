@@ -9,7 +9,7 @@ import biosURL from "@/assets/v86/bios/seabios.bin?url";
 import vgaBiosURL from "@/assets/v86/bios/vgabios.bin?url";
 import ContentCard from "@/components/ContentCard.vue";
 
-const bzimageURL = "/bzImage.bin";
+const bzimageURL = "/bzimage.bin";
 const initrdURL = "/initrd";
 
 

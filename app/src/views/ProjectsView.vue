@@ -5,6 +5,34 @@
   <section class="projects">
     <h2 class="projects-intro">Selected Projects</h2>
     <article class="project-entry">
+      <h3>Google | LiteRT-LM</h3>
+      <p>
+        LiteRT-LM is a cross-platform infrastructure for edge-optimized Large Language Model (LLM) pipelines. It manages
+        the lifecycle and execution of LiteRT models alongside the high-performance C++ components required for pre- and
+        post-processing, such as tokenizers and encoders.
+      </p>
+      <p>
+        I designed and implemented the primary CMake build system for the LiteRT-LM repository, successfully decoupling
+        the project from its Bazel origins to establish a deterministic, portable foundation. This was achieved through
+        a <strong>recursive superbuild orchestration</strong> pattern using <code>ExternalProject_Add</code>, ensuring a
+        hermetic build lifecycle for a high-complexity dependency graph that includes <strong>Abseil, Protobuf,
+        Flatbuffers, and SentencePiece</strong>.
+      </p>
+      <p>
+        To resolve complex version conflicts across internal Google libraries, I engineered a
+        sophisticated re-integration strategy utilizing <strong>aggregate targets and root shims</strong>.
+        By developing a framework of custom patcher and shim modules, I implemented precise build-time
+        modifications and header redirections. This intervention ensured that high-collision dependencies
+        linked deterministically across diverse hardware backends, including <strong>Android (NPU/GPU),
+        Linux, macOS, and Windows</strong>.
+      </p>
+      <p>
+        Beyond the initial migration, I established the systemic architectural standards used throughout the project's
+        sub-trees. By abstracting orchestration logic into reusable modules, I ensured the system remains modular and
+        maintains structural integrity as LiteRT-LM scales to support new AI primitives and hardware backends.
+      </p>
+    </article>
+    <article class="project-entry">
       <h3>Rockstar Games</h3>
       <p>
         During my time at Rockstar Games, I served as a Build & Release Engineer
