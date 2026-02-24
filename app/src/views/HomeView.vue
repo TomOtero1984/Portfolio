@@ -49,14 +49,14 @@ const markdownURL = "https://raw.githubusercontent.com/TomOtero1984/ConC.GPT/ref
 <!--        </strong>-->
 <!--        <FloatingMarkdown :url="markdownURL" :visible="showMarkdown" @close="showMarkdown = false"/>-->
       </p>
-      <p style="text-align: center;">
-        <strong>
-          In an era where code can be generated at an unprecedented pace,
-          the real challenge has shifted from producing syntax to ensuring structural integrity.
-          Without a deliberate architectural foundation, rapid development eventually collapses under the weight of its own technical debt.
-          AI is excellent at manufacturing the bricks, but it takes an engineer to build a structure that stands.
-        </strong>
-      </p>
+      <h4 style="text-align: center;">
+        In an era where code can be generated at an unprecedented pace,
+        the real challenge has shifted from producing syntax to ensuring structural integrity.
+        <br><br>
+        Without a deliberate architectural foundation, rapid development eventually collapses under the weight of its own technical debt.
+        <br><br>
+        AI is excellent at manufacturing the bricks, but it takes an engineer to build a structure that stands.
+      </h4>
     </ContentCard>
   </section>
 </template>

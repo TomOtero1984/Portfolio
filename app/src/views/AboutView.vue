@@ -9,7 +9,7 @@ const hover = ref(false);
 
 <template>
   <div class="about">
-    <h1 class="about-title">About Me</h1>
+    <h1 class="about-title">About Me </h1>
     <div class=about-header>
       <h3 class="about-welcome" style="align-content: center;">
         Hello and welcome to my
