@@ -13,7 +13,7 @@ const hover = ref(false);
     <div class=about-header>
       <h3 class="about-welcome" style="align-content: center;">
         Hello and welcome to my
-        <ImaginationText> About Me</ImaginationText>
+        <ImaginationText> About Me </ImaginationText>
         page!
       </h3>
     </div>
@@ -55,7 +55,7 @@ const hover = ref(false);
 
         <h4>From Hardware to Software</h4>
         <p>
-          I started at Novus Labs doing machine design but quickly gravitated toward automation. That aptitude led to a
+          At Novus Labs, I started by doing machine design but quickly gravitated toward automation. That aptitude led to a
           contract with Cruise GM as an Embedded Systems Software Test Engineer, working on autonomous vehicles.
         </p>
         <p>
